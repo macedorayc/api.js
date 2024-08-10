@@ -111,17 +111,17 @@ servidor.post('/treino/ordenacao', (req, resp) => {
 
 servidor.post('/treino/analiseNotas', (req, resp) => { 
     
-    let media = req.body.itens
-    let maior = req.body.itens
-    let menor = req.body.itens
+    let n1 = req.body.itens
+    let n2 = req.body.itens
+    let n3 = req.body.itens
 
     let tot = soma / 3;
 
     resp.send({
         entrada: {
-            media: media,
-            maior: maior,
-            menor: menor
+            n1: n1,
+            n2: n2,
+            n2: n2
         },
         Nota: Number(tot.toFixed(2))
     })
