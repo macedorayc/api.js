@@ -115,15 +115,21 @@ servidor.post('/treino/analiseNotas', (req, resp) => {
     let n2 = req.body.itens
     let n3 = req.body.itens
 
+    let soma = n1 + n2 + n3;
     let tot = soma / 3;
+
+    let maior = Math.max(n1, n2, n3);
+    let menor = Math.min(n1, n2, n3);
 
     resp.send({
         entrada: {
             n1: n1,
             n2: n2,
-            n2: n2
+            n3: n3
         },
-        Nota: Number(tot.toFixed(2))
+        Nota: Number(tot.toFixed(2)),
+        maior: maior,
+        menor: menor
     })
 
 });
