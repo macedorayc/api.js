@@ -111,9 +111,7 @@ servidor.post('/treino/ordenacao', (req, resp) => {
 
 servidor.post('/treino/analiseNotas', (req, resp) => { 
     
-    let n1 = req.body.itens
-    let n2 = req.body.itens
-    let n3 = req.body.itens
+    let [n1, n2, n3] = req.body.notas;
 
     let soma = n1 + n2 + n3;
     let tot = soma / 3;
